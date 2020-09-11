@@ -52,7 +52,7 @@ class Decide {
     line = lines[++i]
     
     // >field = value[, value]
-    while(m = line.match(/^(\w+)\s*=\s*(.*)$/)) {
+    while(m = line.match(/^(\w+)\s*=\s*(.*)$/)) { // eslint-disable-line
       let field_name = m[1]
       let field_spec = {
         v: m[2].split(/\s*(,|\s+)\s*/).filter(n=>''!=n&&','!=n&&!n.match(/^\s+$/))

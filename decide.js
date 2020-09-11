@@ -7,6 +7,5 @@ class Decide {
     this._patrun = new Patrun()
   }
 }
- 
-module.exports = Decide
 
+module.exports = Decide

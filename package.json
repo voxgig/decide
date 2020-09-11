@@ -1,6 +1,6 @@
 {
   "name": "@voxgig/decide",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "decide.js",
   "browser": "dist/decide.min.js",
   "description": "Decision table utility library",

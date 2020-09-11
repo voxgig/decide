@@ -2251,24 +2251,31 @@ describe('decide', function () {
     var d = new Decide()
 
     d.table(t01)
-    console.log(d._patrun.coffee.list())
+    // console.log(d._patrun.coffee.list())
 
-    expect(d.decide('coffee',{when:'morning',weather:'sun'}))
-      .equal({where:'cafe',how:'drive'})
-    expect(d.decide('coffee',{when:'morning',weather:'rain'}))
-      .equal({where:'vend',how:'walk'})
-    expect(d.decide('coffee',{when:'afternoon',weather:'sun'}))
-      .equal({where:'none',how:'sit'})
-    expect(d.decide('coffee',{when:'afternoon',weather:'rain'}))
-      .equal({where:'none',how:'sit'})
-
+    expect(d.decide('coffee', { when: 'morning', weather: 'sun' })).equal({
+      where: 'cafe',
+      how: 'drive',
+    })
+    expect(d.decide('coffee', { when: 'morning', weather: 'rain' })).equal({
+      where: 'vend',
+      how: 'walk',
+    })
+    expect(d.decide('coffee', { when: 'afternoon', weather: 'sun' })).equal({
+      where: 'none',
+      how: 'sit',
+    })
+    expect(d.decide('coffee', { when: 'afternoon', weather: 'rain' })).equal({
+      where: 'none',
+      how: 'sit',
+    })
   })
 
-  
   it('parse', () => {
     var d = new Decide()
     var ts = d.parse(t01)
-    console.dir(ts,{depth:null})
+    expect(ts.n).equal('coffee')
+    // console.dir(ts,{depth:null})
   })
 })
 

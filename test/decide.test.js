@@ -13,9 +13,44 @@ var expect = Code.expect
 
 var Decide = require('..')
 
+var t01 = `
+# a comment
+coffee:
+
+when    = morning, afternoon
+weather = sun, rain
+where   = cafe, vend, none
+how     = drive walk sit      # end line comment, commas optional
+
+when       weather  =>  where  how
+====================================
+morning    sun      =>  cafe   drive
+morning    rain     =>  vend   walk
+afternoon  *        =>  none   sit    # any weather
+`
+
 describe('decide', function () {
   it('happy', () => {
     var d = new Decide()
-    expect(d._patrun).exists()
+
+    d.table(t01)
+    console.log(d._patrun.coffee.list())
+
+    expect(d.decide('coffee',{when:'morning',weather:'sun'}))
+      .equal({where:'cafe',how:'drive'})
+    expect(d.decide('coffee',{when:'morning',weather:'rain'}))
+      .equal({where:'vend',how:'walk'})
+    expect(d.decide('coffee',{when:'afternoon',weather:'sun'}))
+      .equal({where:'none',how:'sit'})
+    expect(d.decide('coffee',{when:'afternoon',weather:'rain'}))
+      .equal({where:'none',how:'sit'})
+
+  })
+
+  
+  it('parse', () => {
+    var d = new Decide()
+    var ts = d.parse(t01)
+    console.dir(ts,{depth:null})
   })
 })

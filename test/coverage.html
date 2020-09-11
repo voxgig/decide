@@ -536,18 +536,26 @@
         <li><a href="#tests">Test Report</a></li>
         <li><a href="#coverage">Coverage Report</a></li>
         <li class="">
-            <span class="cov high">100</span>
+            <span class="cov high">91.53</span>
             <a href="#decide.js"><span class="basename">decide.js</span></a>
         </li>
         <li><a href="#linting">Linting Report</a></li>
+        <li>
+            <span class="lint"><span class="low">1</span> || <span class="low">1</span></span>
+            <a href="#lint-decide.js">decide.js</a>
+        </li>
+        <li>
+            <span class="lint"><span class="low">1</span> || <span class="low">2</span></span>
+            <a href="#lint-test/decide.test.js">test/decide.test.js</a>
+        </li>
     </div>
     <div id="tests">
       <h1>Test Report</h1>
       <div class="stats high">
           <div class="failures">0</div>
           <div class="skipped">0</div>
-          <div class="test-count">1</div>
-          <div class="duration">18</div>
+          <div class="test-count">2</div>
+          <div class="duration">17</div>
       </div>
       <div id="filters">
           <input type="checkbox" checked="" onchange="filter(this)" value="success" id="show-success">
@@ -572,7 +580,14 @@
               <td class="test-title">decide happy
                   
               </td>
-              <td class="test-duration">6</td>
+              <td class="test-duration">9</td>
+          </tr>
+          <tr class="show decide success">
+              <td class="test-id">2</td>
+              <td class="test-title">decide parse
+                  
+              </td>
+              <td class="test-duration">2</td>
           </tr>
           </tbody>
       </table>
@@ -580,10 +595,10 @@
     </div>    <div id="coverage">
         <h1>Code Coverage Report</h1>
         <div class="stats high">
-            <div class="percentage">100%</div>
-            <div class="sloc">7</div>
-            <div class="hits">7</div>
-            <div class="misses">0</div>
+            <div class="percentage">91.53%</div>
+            <div class="sloc">59</div>
+            <div class="hits">54</div>
+            <div class="misses">5</div>
         </div>
         <div id="filters">
           <input type="checkbox" checked="" onchange="filter(this)" value="generated" id="show-generated">
@@ -593,10 +608,10 @@
             <div class="file ">
                 <h2 id="decide.js">decide.js </h2>
                 <div class="stats high">
-                    <div class="percentage">100%</div>
-                    <div class="sloc">7</div>
-                    <div class="hits">7</div>
-                    <div class="misses">0</div>
+                    <div class="percentage">91.53%</div>
+                    <div class="sloc">59</div>
+                    <div class="hits">54</div>
+                    <div class="misses">5</div>
                 </div>
                 <table>
                     <thead>
@@ -649,7 +664,7 @@
                           <td class="line" data-tooltip>7</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source">    this._patrun &#x3D; new Patrun()</td>
+                          <td class="source">    this._patrun &#x3D; {}</td>
                           
                         </tr>            <tr id="decide.js__8" class="hit">
                           <td class="line" data-tooltip>8</td>
@@ -661,22 +676,464 @@
                           <td class="line" data-tooltip>9</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source">}</td>
+                          <td class="source"></td>
                           
                         </tr>            <tr id="decide.js__10" class="hit">
                           <td class="line" data-tooltip>10</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source"></td>
+                          <td class="source">  table(ts) {</td>
                           
                         </tr>            <tr id="decide.js__11" class="hit">
                           <td class="line" data-tooltip>11</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
-                          <td class="source">module.exports &#x3D; Decide</td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    let table_spec &#x3D; ts</td>
                           
                         </tr>            <tr id="decide.js__12" class="hit">
                           <td class="line" data-tooltip>12</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"></td>
+                          
+                        </tr>            <tr id="decide.js__13" class="chunks">
+                          <td class="line" data-tooltip>13</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"><div>    if(</div><div class="miss true" data-tooltip>&#x27;string&#x27; &#x3D;&#x3D;&#x3D; typeof(ts)</div><div>) {</div></td>
+                          
+                        </tr>            <tr id="decide.js__14" class="hit">
+                          <td class="line" data-tooltip>14</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>1</td>
+                          <td class="source">      table_spec &#x3D; this.parse(ts)</td>
+                          
+                        </tr>            <tr id="decide.js__15" class="hit">
+                          <td class="line" data-tooltip>15</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    }</td>
+                          
+                        </tr>            <tr id="decide.js__16" class="miss">
+                          <td class="line" data-tooltip>16</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source" data-tooltip>    else if(Array.isArray(ts)) {</td>
+                          
+                        </tr>            <tr id="decide.js__17" class="hit">
+                          <td class="line" data-tooltip>17</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">      // TODO: table_spec &#x3D; this.array(ts)</td>
+                          
+                        </tr>            <tr id="decide.js__18" class="hit">
+                          <td class="line" data-tooltip>18</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    }</td>
+                          
+                        </tr>            <tr id="decide.js__19" class="hit">
+                          <td class="line" data-tooltip>19</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"></td>
+                          
+                        </tr>            <tr id="decide.js__20" class="hit">
+                          <td class="line" data-tooltip>20</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>1</td>
+                          <td class="source">    let p &#x3D; this._patrun[table_spec.n] &#x3D; new Patrun({gex: true})</td>
+                          
+                        </tr>            <tr id="decide.js__21" class="hit">
+                          <td class="line" data-tooltip>21</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"></td>
+                          
+                        </tr>            <tr id="decide.js__22" class="hit">
+                          <td class="line" data-tooltip>22</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>1</td>
+                          <td class="source">    table_spec.t.forEach(c&#x3D;&gt;{</td>
+                          
+                        </tr>            <tr id="decide.js__23" class="hit">
+                          <td class="line" data-tooltip>23</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">      p.add(c.c,c.r)</td>
+                          
+                        </tr>            <tr id="decide.js__24" class="hit">
+                          <td class="line" data-tooltip>24</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    })</td>
+                          
+                        </tr>            <tr id="decide.js__25" class="hit">
+                          <td class="line" data-tooltip>25</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">  }</td>
+                          
+                        </tr>            <tr id="decide.js__26" class="hit">
+                          <td class="line" data-tooltip>26</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"></td>
+                          
+                        </tr>            <tr id="decide.js__27" class="hit">
+                          <td class="line" data-tooltip>27</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">  parse(tstr) {</td>
+                          
+                        </tr>            <tr id="decide.js__28" class="hit">
+                          <td class="line" data-tooltip>28</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    let ts &#x3D; {t:[],f:{}}</td>
+                          
+                        </tr>            <tr id="decide.js__29" class="hit">
+                          <td class="line" data-tooltip>29</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"></td>
+                          
+                        </tr>            <tr id="decide.js__30" class="hit">
+                          <td class="line" data-tooltip>30</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    let m &#x3D; null</td>
+                          
+                        </tr>            <tr id="decide.js__31" class="hit">
+                          <td class="line" data-tooltip>31</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    let lines &#x3D; tstr</td>
+                          
+                        </tr>            <tr id="decide.js__32" class="hit">
+                          <td class="line" data-tooltip>32</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">        .split(/[\n\r]/)</td>
+                          
+                        </tr>            <tr id="decide.js__33" class="chunks">
+                          <td class="line" data-tooltip>33</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"><div>        .map(n&#x3D;&gt;(m&#x3D;n.match(/^([^#]+)/),m&amp;&amp;</div><div class="miss true" data-tooltip>m[1]</div><div>||&#x27;&#x27;))</div></td>
+                          
+                        </tr>            <tr id="decide.js__34" class="hit">
+                          <td class="line" data-tooltip>34</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">        .filter(n&#x3D;&gt;</td>
+                          
+                        </tr>            <tr id="decide.js__35" class="hit">
+                          <td class="line" data-tooltip>35</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">                n!&#x3D;&#x27;&#x27; &amp;&amp;</td>
+                          
+                        </tr>            <tr id="decide.js__36" class="chunks">
+                          <td class="line" data-tooltip>36</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"><div>                </div><div class="miss true" data-tooltip>!n.match(/^\s+$/)</div><div> &amp;&amp;</div></td>
+                          
+                        </tr>            <tr id="decide.js__37" class="chunks">
+                          <td class="line" data-tooltip>37</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"><div>                </div><div class="miss true" data-tooltip>!n.match(/^\s*#/)</div><div> &amp;&amp;</div></td>
+                          
+                        </tr>            <tr id="decide.js__38" class="hit">
+                          <td class="line" data-tooltip>38</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">                !n.match(/^&#x3D;+$/)</td>
+                          
+                        </tr>            <tr id="decide.js__39" class="hit">
+                          <td class="line" data-tooltip>39</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">               )</td>
+                          
+                        </tr>            <tr id="decide.js__40" class="hit">
+                          <td class="line" data-tooltip>40</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"></td>
+                          
+                        </tr>            <tr id="decide.js__41" class="hit">
+                          <td class="line" data-tooltip>41</td>
+                          <td class="lint">
+                              <span class="warnings" data-tooltip="no-console - Unexpected console statement."></span>
+                          </td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    console.log(&#x27;lines&#x27;,lines)</td>
+                          
+                        </tr>            <tr id="decide.js__42" class="hit">
+                          <td class="line" data-tooltip>42</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"></td>
+                          
+                        </tr>            <tr id="decide.js__43" class="hit">
+                          <td class="line" data-tooltip>43</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    let i &#x3D; 0</td>
+                          
+                        </tr>            <tr id="decide.js__44" class="hit">
+                          <td class="line" data-tooltip>44</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    let line &#x3D; lines[0]</td>
+                          
+                        </tr>            <tr id="decide.js__45" class="hit">
+                          <td class="line" data-tooltip>45</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    </td>
+                          
+                        </tr>            <tr id="decide.js__46" class="hit">
+                          <td class="line" data-tooltip>46</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    // &gt;name</td>
+                          
+                        </tr>            <tr id="decide.js__47" class="hit">
+                          <td class="line" data-tooltip>47</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    ts.n &#x3D; line.match(/^\w+/)[0]</td>
+                          
+                        </tr>            <tr id="decide.js__48" class="hit">
+                          <td class="line" data-tooltip>48</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    line &#x3D; lines[++i]</td>
+                          
+                        </tr>            <tr id="decide.js__49" class="hit">
+                          <td class="line" data-tooltip>49</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    </td>
+                          
+                        </tr>            <tr id="decide.js__50" class="hit">
+                          <td class="line" data-tooltip>50</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    // &gt;field &#x3D; value[, value]</td>
+                          
+                        </tr>            <tr id="decide.js__51" class="hit">
+                          <td class="line" data-tooltip>51</td>
+                          <td class="lint">
+                              <span class="errors" data-tooltip="no-cond-assign - Expected a conditional expression and instead saw an assignment."></span>
+                          </td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    while(m &#x3D; line.match(/^(\w+)\s*&#x3D;\s*(.*)$/)) {</td>
+                          
+                        </tr>            <tr id="decide.js__52" class="hit">
+                          <td class="line" data-tooltip>52</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>8</td>
+                          <td class="source">      let field_name &#x3D; m[1]</td>
+                          
+                        </tr>            <tr id="decide.js__53" class="hit">
+                          <td class="line" data-tooltip>53</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>8</td>
+                          <td class="source">      let field_spec &#x3D; {</td>
+                          
+                        </tr>            <tr id="decide.js__54" class="hit">
+                          <td class="line" data-tooltip>54</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">        v: m[2].split(/\s*(,|\s+)\s*/).filter(n&#x3D;&gt;&#x27;&#x27;!&#x3D;n&amp;&amp;&#x27;,&#x27;!&#x3D;n&amp;&amp;!n.match(/^\s+$/))</td>
+                          
+                        </tr>            <tr id="decide.js__55" class="hit">
+                          <td class="line" data-tooltip>55</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">      }</td>
+                          
+                        </tr>            <tr id="decide.js__56" class="hit">
+                          <td class="line" data-tooltip>56</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>8</td>
+                          <td class="source">      ts.f[field_name] &#x3D; field_spec</td>
+                          
+                        </tr>            <tr id="decide.js__57" class="hit">
+                          <td class="line" data-tooltip>57</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>8</td>
+                          <td class="source">      line &#x3D; lines[++i]</td>
+                          
+                        </tr>            <tr id="decide.js__58" class="hit">
+                          <td class="line" data-tooltip>58</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    }</td>
+                          
+                        </tr>            <tr id="decide.js__59" class="hit">
+                          <td class="line" data-tooltip>59</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    </td>
+                          
+                        </tr>            <tr id="decide.js__60" class="hit">
+                          <td class="line" data-tooltip>60</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    // &gt;in_field[ in_field] &#x3D;&gt; out_field[ out_field]</td>
+                          
+                        </tr>            <tr id="decide.js__61" class="hit">
+                          <td class="line" data-tooltip>61</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    m &#x3D; line.split(/\s*&#x3D;&gt;\s*/)</td>
+                          
+                        </tr>            <tr id="decide.js__62" class="hit">
+                          <td class="line" data-tooltip>62</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    ts.c &#x3D; m[0].split(/\s+/)</td>
+                          
+                        </tr>            <tr id="decide.js__63" class="hit">
+                          <td class="line" data-tooltip>63</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    ts.r &#x3D; m[1].split(/\s+/)</td>
+                          
+                        </tr>            <tr id="decide.js__64" class="hit">
+                          <td class="line" data-tooltip>64</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    line &#x3D; lines[++i]</td>
+                          
+                        </tr>            <tr id="decide.js__65" class="hit">
+                          <td class="line" data-tooltip>65</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    </td>
+                          
+                        </tr>            <tr id="decide.js__66" class="hit">
+                          <td class="line" data-tooltip>66</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    while(line &amp;&amp; (m &#x3D; line.split(/\s*&#x3D;&gt;\s*/))) {</td>
+                          
+                        </tr>            <tr id="decide.js__67" class="hit">
+                          <td class="line" data-tooltip>67</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>8</td>
+                          <td class="source">      let tr &#x3D; {}</td>
+                          
+                        </tr>            <tr id="decide.js__68" class="hit">
+                          <td class="line" data-tooltip>68</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>8</td>
+                          <td class="source">      let cond &#x3D; m[0].split(/\s+/)</td>
+                          
+                        </tr>            <tr id="decide.js__69" class="hit">
+                          <td class="line" data-tooltip>69</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>8</td>
+                          <td class="source">      let res &#x3D; m[1].split(/\s+/)</td>
+                          
+                        </tr>            <tr id="decide.js__70" class="hit">
+                          <td class="line" data-tooltip>70</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"></td>
+                          
+                        </tr>            <tr id="decide.js__71" class="hit">
+                          <td class="line" data-tooltip>71</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>8</td>
+                          <td class="source">      tr.c &#x3D; ts.c.reduce((o,cf,i)&#x3D;&gt;(o[cf]&#x3D;cond[i],o),{})</td>
+                          
+                        </tr>            <tr id="decide.js__72" class="hit">
+                          <td class="line" data-tooltip>72</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>8</td>
+                          <td class="source">      tr.r &#x3D; ts.r.reduce((o,rf,i)&#x3D;&gt;(o[rf]&#x3D;res[i],o),{})</td>
+                          
+                        </tr>            <tr id="decide.js__73" class="hit">
+                          <td class="line" data-tooltip>73</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">      </td>
+                          
+                        </tr>            <tr id="decide.js__74" class="hit">
+                          <td class="line" data-tooltip>74</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>8</td>
+                          <td class="source">      ts.t.push(tr)</td>
+                          
+                        </tr>            <tr id="decide.js__75" class="hit">
+                          <td class="line" data-tooltip>75</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">      </td>
+                          
+                        </tr>            <tr id="decide.js__76" class="hit">
+                          <td class="line" data-tooltip>76</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>8</td>
+                          <td class="source">      line &#x3D; lines[++i]</td>
+                          
+                        </tr>            <tr id="decide.js__77" class="hit">
+                          <td class="line" data-tooltip>77</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    }</td>
+                          
+                        </tr>            <tr id="decide.js__78" class="hit">
+                          <td class="line" data-tooltip>78</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"></td>
+                          
+                        </tr>            <tr id="decide.js__79" class="hit">
+                          <td class="line" data-tooltip>79</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    return ts</td>
+                          
+                        </tr>            <tr id="decide.js__80" class="hit">
+                          <td class="line" data-tooltip>80</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">  }</td>
+                          
+                        </tr>            <tr id="decide.js__81" class="hit">
+                          <td class="line" data-tooltip>81</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">  </td>
+                          
+                        </tr>            <tr id="decide.js__82" class="hit">
+                          <td class="line" data-tooltip>82</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">}</td>
+                          
+                        </tr>            <tr id="decide.js__83" class="hit">
+                          <td class="line" data-tooltip>83</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"></td>
+                          
+                        </tr>            <tr id="decide.js__84" class="hit">
+                          <td class="line" data-tooltip>84</td>
+                          <td class="lint empty"></td>
+                          <td class="hits" data-tooltip>1</td>
+                          <td class="source">module.exports &#x3D; Decide</td>
+                          
+                        </tr>            <tr id="decide.js__85" class="hit">
+                          <td class="line" data-tooltip>85</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
                           <td class="source"></td>
@@ -688,10 +1145,24 @@
     </div>    <div id="linting">
         <h1>Linting Report</h1>
             <div class="lint-stats">
-                <span class="lint-errors high">0</span>
-                <span class="lint-warnings high">0</span>
+                <span class="lint-errors low">2</span>
+                <span class="lint-warnings low">3</span>
             </div>
             <div class="lint-files">
-            </div>
+                <div class="lint-file">
+                </div>            <div class="lint-file">
+                    <h2 id="lint-decide.js">decide.js</h2>
+                    <ul>
+                        <li class="lint-entry">L41 - <span class="level-WARNING">WARNING</span> - no-console - Unexpected console statement.</li>
+                        <li class="lint-entry">L51 - <span class="level-ERROR">ERROR</span> - no-cond-assign - Expected a conditional expression and instead saw an assignment.</li>
+                    </ul>
+                </div>            <div class="lint-file">
+                    <h2 id="lint-test/decide.test.js">test/decide.test.js</h2>
+                    <ul>
+                        <li class="lint-entry">L12 - <span class="level-ERROR">ERROR</span> - no-unused-vars - &#x27;expect&#x27; is assigned a value but never used.</li>
+                        <li class="lint-entry">L38 - <span class="level-WARNING">WARNING</span> - no-console - Unexpected console statement.</li>
+                        <li class="lint-entry">L45 - <span class="level-WARNING">WARNING</span> - no-console - Unexpected console statement.</li>
+                    </ul>
+                </div>        </div>
     </div>  </body>
 </html>
